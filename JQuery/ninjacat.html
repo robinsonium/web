@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('document').ready(function () {
+            $('img').click(function(){$(this).attr("src",$(this).attr("alt-img"))});
+        });
+    </script>
+    <style>
+        body {
+            width: 1000px;
+        }
+        img{
+            display:block;
+            padding: 5px;
+        }
+        div{
+            display: inline-block;
+            margin-left: 250px;
+        }
+    </style>
+    <title>ninja to cat</title>
+</head>
+<body>
+    <div>
+        <img src="img/cat0.png" alt-img="img/ninja0.png">
+        <img src="img/cat1.png" alt-img="img/ninja1.png">
+        <img src="img/cat2.png" alt-img="img/ninja2.png">
+        <img src="img/cat3.png" alt-img="img/ninja3.png">
+        <img src="img/cat4.png" alt-img="img/ninja4.png">
+    </div>
+    <div>
+        <img src="img/ninja0.png" alt-img="img/cat0.png">
+        <img src="img/ninja1.png" alt-img="img/cat1.png">
+        <img src="img/ninja2.png" alt-img="img/cat2.png">
+        <img src="img/ninja3.png" alt-img="img/cat3.png">
+        <img src="img/ninja4.png" alt-img="img/cat4.png">
+    </div>
+</body>
+</html>

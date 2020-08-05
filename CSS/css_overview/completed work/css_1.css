@@ -1,0 +1,14 @@
+p{
+	color:blue;
+	display: inline-block;
+}
+#code{
+	font-size:14px;
+	font-family: monospace;
+	display: inline;
+	text-align: center;
+}
+.info{
+	background-color: green;
+	border:1px solid black;
+}

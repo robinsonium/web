@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('document').ready(function () {
+            $('img').click(function () { $(this).hide() });
+            $('#restore').click(function() {$('img').show() });
+        });
+    </script>
+    <title>Disappearing Image</title>
+    <style>
+        img {
+            width: 100px;
+            padding: 10px 50px;
+            border: black 1px solid;
+        }
+        #restore{
+            background-attachment: green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <img src="dojocat.jpg" alt="">
+        <img src="dojocat.jpg" alt="">
+        <img src="dojocat.jpg" alt="">
+        <img src="dojocat.jpg" alt="">
+    </div>
+
+    <div>
+        <img src="dojocat.jpg" alt="">
+        <img src="dojocat.jpg" alt="">
+        <img src="dojocat.jpg" alt="">
+        <img src="dojocat.jpg" alt="">>
+    </div>
+    <button id="restore">Restore</button>
+
+</body>
+
+</html>

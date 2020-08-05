@@ -1,0 +1,8 @@
+h1{
+    background-color: cornflowerblue;
+    border-color: crimson;
+    margin:3px;
+    padding: 40px;
+    border-width: 30px;
+    border-style: double;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        div {
+            border: 1px dotted red;
+            text-align: center;
+        }
+
+        .special {
+            color: blue;
+            border: 3px black dashed;
+        }
+
+        ul {
+            text-align: left;
+        }
+
+        img{
+            display: inline-block;
+            margin-right: 200px;
+        }
+
+        #slidedown{
+            display: inline-block;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery practice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('document').ready(function () {
+            $('#click button').click(function () { alert("I got clicked") }) //.click
+            $('#addclass').click(function () { $('#hide').addClass("special") }) //.addclass
+            $('#show').click(function () { $('img').show() }) //.show
+            $('#hide').click(function () { $('img').hide() }) //.hide
+            $('#toggle').click(function () { $('img').toggle() }) //.toggle
+            $('#append').click(function () { $('#append').append("<h4>Here's a new h4</h4>").addClass('special') })//.append
+            $('#slideup').click(function () { $('img').slideUp() }) //.slideUp
+            $('#slidedown').hover(function () { $('img').slideDown() }) //.slideDown
+            $('#slideToggle').click(function() { $('img').slideToggle(4000)  })
+            $('#fadein').click(function(){ $('img').fadeIn()})
+            $('#fadeout').click(function(){ $('img').fadeOut()})
+            $('#before').click(function(){ $('#box3 h2').before("<p>Some content!</p>")})
+            $('#after').click(function(){ $('#box3 h2').after("<p>Some content to go after</p>")})
+            $('#htm').click(function() { var htmlstring=$(this).html(); console.log(htmlstring); })
+            $('#console').click(function() {console.log($('#box3').html()); })
+            $('#console').click(function() {console.log($(this),"This is $this")})
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="click">
+        <button>Click me</button>
+        <ul>
+            <li>slideDown</li>
+            <li>slideUp</li>
+            <li>slideToggle</li>
+            <li>fadeIn</li>
+            <li>fadeOut</li>
+            <li>addClass</li>
+            <li>before</li>
+            <li>after</li>
+            <li>append</li>
+            <li>html</li>
+            <li>attr</li>
+            <li>val</li>
+            <li>text</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Here is where we'll try some other fun stuff</h3>
+        <p>I'm a paragraph, short and stout
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto eligendi molestias ex beatae at pariatur nobis recusandae aliquam sed? Sunt illum dolore facere? Quos, alias distinctio. Placeat expedita deserunt voluptatum.
+        </p>
+        <button id="htm">Click me to mess with HTML</button>
+        <button id="console">Click me to dump html to the console log</button>
+    </div>
+    <div id="addclass">
+        <h2>Click here to add class</h2>
+        <button>Add some class</button>
+    </div>
+    <div>
+        <img src="images/portfolio4.png" alt="">
+        <button id="hide">hide image</button>
+        <button id="show">show image</button>
+        <button id="toggle">toggle image</button>
+        <button id="slideup">Slide it up</button>
+        <h4 id="slidedown">Hover here to slide down</h4>
+        <button id="slideToggle">I slide toggle</button>
+        <button id="fadein">I fade it in</button>
+        <button id="fadeout">I fade it back out</button>
+    </div>
+    <div id="box3">
+        <button id="append">click to append</button>
+        <h2>As h2s go, this one is pretty sweet, you have to admit</h2>
+        <button id="before">add content before the h2 </button>
+        <button id="after">Add content AFTER the h2</button>
+    </div>
+</body>
+
+</html>
